@@ -2,14 +2,14 @@ import { cn } from "@/lib/utils";
 
 export function ChartShell({ children, className, title }: { children: React.ReactNode; className?: string; title?: string }) {
   return (
-    <div className={cn("rounded-3xl border border-white/10 bg-[#07101a] p-4 shadow-2xl shadow-black/30", className)}>
+    <div className={cn("rounded-3xl border border-white/10 bg-[#07101a] p-4 shadow-2xl shadow-black/30 ring-1 ring-cyan-300/5", className)}>
       <div className="mb-3 flex items-center justify-between border-b border-white/10 pb-3">
         <div className="flex gap-1.5">
           <span className="h-2.5 w-2.5 rounded-full bg-red-400/70" />
           <span className="h-2.5 w-2.5 rounded-full bg-yellow-300/70" />
           <span className="h-2.5 w-2.5 rounded-full bg-emerald-300/70" />
         </div>
-        <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500">{title ?? "MSNR chart study"}</span>
+        <span className="font-mono text-[10px] uppercase tracking-[0.22em] text-slate-500">{title ?? "MSNR chart study"} · education only</span>
       </div>
       {children}
     </div>

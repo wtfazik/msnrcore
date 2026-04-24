@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://msnrcore.local"),
+  metadataBase: new URL("https://msnrcore.vercel.app"),
   title: {
     default: "MSNRCore — Market Structure & Smart Money Trading Education",
     template: "%s | MSNRCore",

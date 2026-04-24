@@ -11,12 +11,13 @@ const links = [
   { href: "/faq", label: "FAQ" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" },
+  { href: "/bug-bounty", label: "Bug Bounty" },
   { href: "/disclaimer", label: "Disclaimer" },
 ];
 
 export function Footer() {
   return (
-    <footer className="mt-auto border-t border-white/10 bg-black/20 py-10">
+    <footer className="mt-auto border-t border-white/10 bg-black/30 py-12">
       <Container>
         <div className="grid gap-8 lg:grid-cols-[1.2fr_1fr] lg:items-start">
           <div>
@@ -26,7 +27,7 @@ export function Footer() {
             </p>
             <p className="mt-4 text-xs leading-6 text-slate-500">{disclaimer}</p>
           </div>
-          <nav className="grid grid-cols-2 gap-3 sm:grid-cols-4" aria-label="Footer navigation">
+          <nav className="grid grid-cols-2 gap-3 sm:grid-cols-3" aria-label="Footer navigation">
             {links.map((link) => (
               <Link key={link.href} href={link.href} className="text-sm text-slate-400 transition hover:text-cyan-100">
                 {link.label}

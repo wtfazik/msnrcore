@@ -10,6 +10,7 @@ export type Article = {
   excerpt: string;
   contentSections: ArticleSection[];
   relatedArticles: string[];
+  aliases?: string[];
 };
 
 export const articles: Article[] = [
@@ -30,6 +31,7 @@ export const articles: Article[] = [
   },
   {
     slug: "ict-concepts-a-beginner-friendly-overview",
+    aliases: ["ict-concepts-beginner-friendly-overview"],
     title: "ICT Concepts: A Beginner-Friendly Overview",
     subtitle: "How liquidity, session timing, FVGs, and premium-discount logic fit together.",
     date: "2026-01-14",
@@ -137,8 +139,10 @@ export const articles: Article[] = [
 
 export const articleCategories = ["All", ...Array.from(new Set(articles.map((article) => article.category)))];
 
+export const articleRoutes = articles.flatMap((article) => [article.slug, ...(article.aliases ?? [])]);
+
 export function getArticle(slug: string) {
-  return articles.find((article) => article.slug === slug);
+  return articles.find((article) => article.slug === slug || article.aliases?.includes(slug));
 }
 
 export function getRelatedArticles(slugs: string[]) {

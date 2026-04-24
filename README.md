@@ -21,22 +21,20 @@ npm run build
 npm start
 ```
 
-The production server uses Next.js and reads the standard `PORT` environment variable. If no port is provided, Next.js uses `3000`.
+For local production testing, Next.js reads the standard `PORT` environment variable. If no port is provided, Next.js uses `3000`.
 
-## VPS / Wispbyte Deployment
+## Vercel Deployment
 
-1. Upload the project folder by zip, file manager, or git clone.
-2. Run `npm install`.
-3. Run `npm run build`.
-4. Run `npm start`.
+The project is compatible with Vercel's standard Next.js build pipeline.
 
-Optional PM2 command:
+- Install command: `npm install`
+- Build command: `npm run build`
+- Output: handled by Vercel for Next.js App Router
+- No server-only runtime or proprietary hosting dependency is required
 
-```bash
-pm2 start npm --name "msnrcore" -- start
-```
+## Design System
 
-The project uses `output: "standalone"` in `next.config.ts` for production-friendly server builds and does not require Vercel-specific features.
+The internal design system is documented in `DESIGN.md`. It defines color tokens, typography rules, spacing, card rules, button variants, badge variants, chart visual rules, and motion guidance.
 
 ## Folder Structure
 
@@ -45,12 +43,23 @@ The project uses `output: "standalone"` in `next.config.ts` for production-frien
 - `src/components/ui` - Reusable UI primitives
 - `src/components/charts` - Custom SVG chart visuals
 - `src/components` - Feature components for concepts, blog, strategies, and contact form
-- `src/data` - Typed concepts, articles, FAQ, strategies, and learning paths
+- `src/data` - Typed concepts, concept enhancements, articles, FAQ, strategies, and learning paths
 - `src/lib` - Shared utilities and disclaimer text
 
 ## Assets And Licenses
 
 No external images or copyrighted stock assets are used. The MSNRCore logo and all chart visuals are custom SVG/React components created inside the project.
+
+Research and inspiration sources reviewed:
+
+- VoltAgent `awesome-design-md` for design-system documentation structure and consistent token rules
+- Figma MCP Server Guide for component reuse, design-context discipline, and avoiding placeholder assets
+- SVGLogo.dev for SVG-first logo and export-ready vector thinking
+- Pencil.dev for minimal product spacing and polished landing-page mood
+- Bloom.ai was attempted but was not reachable during research
+- Lucide Icons are used through the open-source `lucide-react` package
+
+Real photos were intentionally not added because custom chart SVGs better match the trading-analysis educational goal and avoid licensing or broken URL risk.
 
 Dependencies are open-source packages installed from npm. See each package license in `node_modules` or the package registry.
 

@@ -69,6 +69,13 @@ body::after {
   mask-image: linear-gradient(to bottom, black, transparent 78%);
 }
 
+.market-surface {
+  background:
+    linear-gradient(135deg, rgba(103, 232, 249, 0.08), transparent 34%),
+    linear-gradient(315deg, rgba(167, 139, 250, 0.08), transparent 36%),
+    rgba(255, 255, 255, 0.04);
+}
+
 ::selection {
   color: #031019;
   background: var(--cyan);
