@@ -1,0 +1,15 @@
+export const faqItems = [
+  { question: "What is MSNRCore?", answer: "MSNRCore is a structured trading education platform focused on market structure, SNR/MSNR, liquidity, smart money concepts, ICT ideas, and chart analysis. It is not a broker or signal service." },
+  { question: "What is SMC?", answer: "SMC stands for Smart Money Concepts. It studies liquidity, displacement, structure, order blocks, and imbalances as a framework for understanding price action." },
+  { question: "What is ICT?", answer: "ICT is a trading education framework that emphasizes liquidity, session timing, fair value gaps, premium-discount logic, and market structure." },
+  { question: "What is SNR?", answer: "SNR means support and resistance. It maps zones where price has previously reacted, accepted, or rejected value." },
+  { question: "What is MSNR?", answer: "MSNR means market-structure support and resistance. It combines SNR zones with swing structure, liquidity context, and trend state." },
+  { question: "What is the difference between BOS and CHOACH?", answer: "BOS usually confirms continuation by breaking a meaningful swing in the trend direction. CHOACH warns that character may be changing by breaking the internal rhythm against the previous move." },
+  { question: "What is FVG?", answer: "FVG means fair value gap, a three-candle imbalance left by fast repricing. It is a study zone, not a guaranteed entry." },
+  { question: "What is an Order Block?", answer: "An order block is a refined supply or demand area, commonly the final opposing candle before meaningful displacement." },
+  { question: "What is Inducement?", answer: "Inducement is an obvious setup or level that can attract early participation before price moves toward a deeper liquidity objective." },
+  { question: "What is a Liquidity Sweep?", answer: "A liquidity sweep moves beyond an obvious high or low, triggers orders, and then returns back inside the prior area if the sweep rejects." },
+  { question: "What is the difference between day trading and swing trading?", answer: "Day trading focuses on intraday execution and same-day decisions. Swing trading focuses on larger multi-day or multi-week moves and higher-timeframe structure." },
+  { question: "How should a beginner start?", answer: "Start with trend lines, SNR, basic candlestick confirmation, Fibonacci context, and trading style selection before moving into advanced liquidity or smart money models." },
+  { question: "Is this financial advice?", answer: "No. This website is for educational purposes only and does not constitute financial advice." },
+];

@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# MSNRCore
 
-## Getting Started
+MSNRCore is a premium educational trading platform focused on market structure, SNR/MSNR, SMC, ICT, liquidity, order blocks, FVGs, and real chart analysis concepts.
 
-First, run the development server:
+This is not a broker, signal-selling website, or financial advice service. This website is for educational purposes only and does not constitute financial advice.
+
+## Tech Stack
+
+- Next.js App Router
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- lucide-react
+- Custom React/SVG chart visuals
+
+## Setup
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The production server uses Next.js and reads the standard `PORT` environment variable. If no port is provided, Next.js uses `3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## VPS / Wispbyte Deployment
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Upload the project folder by zip, file manager, or git clone.
+2. Run `npm install`.
+3. Run `npm run build`.
+4. Run `npm start`.
 
-## Learn More
+Optional PM2 command:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+pm2 start npm --name "msnrcore" -- start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project uses `output: "standalone"` in `next.config.ts` for production-friendly server builds and does not require Vercel-specific features.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Folder Structure
 
-## Deploy on Vercel
+- `src/app` - App Router pages and dynamic routes
+- `src/components/layout` - Navbar, mobile menu, footer, and logo
+- `src/components/ui` - Reusable UI primitives
+- `src/components/charts` - Custom SVG chart visuals
+- `src/components` - Feature components for concepts, blog, strategies, and contact form
+- `src/data` - Typed concepts, articles, FAQ, strategies, and learning paths
+- `src/lib` - Shared utilities and disclaimer text
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Assets And Licenses
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+No external images or copyrighted stock assets are used. The MSNRCore logo and all chart visuals are custom SVG/React components created inside the project.
+
+Dependencies are open-source packages installed from npm. See each package license in `node_modules` or the package registry.
+
+## Disclaimer
+
+This website is for educational purposes only and does not constitute financial advice. Trading involves risk. Users are responsible for their own decisions, research, and risk management. Past examples do not guarantee future results.
